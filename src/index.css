@@ -1,0 +1,15 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-color: #131215;
+}
+
+#input-div input{
+  box-shadow: black 0px 1px 14px 0px;
+  border-radius: 25px;
+}
