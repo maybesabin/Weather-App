@@ -98,8 +98,15 @@ const App = () => {
     return `${dayName} ${day}, ${monthName}`
   }
 
+  //Run on 'Enter' Key
+  const handleKeyDown = (event) => {
+    if(event.key == 'Enter'){
+      searchCity(city);
+    }
+  }
+
   return (
-    <div className="flex flex-col gap-6 items-center text-white justify-center h-[100vh]">
+    <div className="flex flex-col gap-6 items-center text-white justify-center overflow-hidden h-[100vh]">
       <Snackbar
         anchorOrigin={{ vertical, horizontal }}
         open={open}
@@ -115,6 +122,7 @@ const App = () => {
       <div className="w-[350px] md:w-[450px] text-white flex items-center gap-4 justify-start px-6 bg-[#1c1c1e] rounded-full h-[55px]">
         <i onClick={handleSearch} className="cursor-pointer text-white fa-solid fa-magnifying-glass"></i>
         <input
+          onKeyDown={handleKeyDown}
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Search your city or country..."
