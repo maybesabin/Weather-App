@@ -112,7 +112,7 @@ const App = () => {
         }
       />
 
-      <div className="w-[400px] md:w-[450px] text-white flex items-center gap-4 justify-start px-6 bg-[#1c1c1e] rounded-full h-[55px]">
+      <div className="w-[350px] md:w-[450px] text-white flex items-center gap-4 justify-start px-6 bg-[#1c1c1e] rounded-full h-[55px]">
         <i onClick={handleSearch} className="cursor-pointer text-white fa-solid fa-magnifying-glass"></i>
         <input
           value={city}
@@ -126,8 +126,8 @@ const App = () => {
       {
         weather &&
 
-        <div className={`flex flex-col items-center justify-evenly gap-7 w-[400px] md:w-[450px]`}>
-          <div className="flex items-start py-6 justify-around gap-12 w-[100%] rounded-[25px] bg-[#1c1c1e] h-[250px] md:h-[300px]">
+        <div className={`flex flex-col items-center justify-evenly gap-7 w-[350px] md:w-[450px]`}>
+          <div className="flex items-start py-6 md:px-0 px-6 justify-around gap-12 w-[100%] rounded-[25px] bg-[#1c1c1e] h-[280px] md:h-[300px]">
             <div className="flex flex-col items-center justify-center">
               {weather && (
                 <div className="flex gap-3 flex-col items-start justify-center">
@@ -155,33 +155,33 @@ const App = () => {
           </div>
 
           {/* Weather Info */}
-          <div className="flex items-center flex-wrap justify-around gap-4 w-[400px] md:w-[450px] p-4 bg-[#1c1c1e] h-[250px] rounded-[25px]">
-            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
+          <div className="flex items-center flex-wrap justify-around gap-4 w-[350px] md:w-[450px] p-4 bg-[#1c1c1e] h-[250px] rounded-[25px]">
+            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[150px] md:w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
               <h1 className="text-xs text-gray-300">Humidity</h1>
               <div className="flex text-2xl items-center justify-between w-[100%]">
                 <i className="fa-solid fa-droplet"></i>
-                {weather && <h3>{weather.humidity}%</h3>}
+                {weather && <h3 className='text-[1rem] md:text-2xl'>{weather.humidity}%</h3>}
               </div>
             </div>
-            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
+            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[150px] md:w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
               <h1 className="text-xs text-gray-300">Wind Speed</h1>
               <div className="flex text-2xl items-center justify-between w-[100%]">
                 <i className="fa-solid fa-wind"></i>
-                {weather && <h3>{weather.windSpeed} <span className="text-[0.6rem]">Km/h</span></h3>}
+                {weather && <h3 className='text-[1rem] md:text-2xl'>{weather.windSpeed} <span className="text-[0.6rem]">Km/h</span></h3>}
               </div>
             </div>
-            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
+            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[150px] md:w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
               <h1 className="text-xs text-gray-300">Sunrise</h1>
               <div className="flex text-2xl items-center justify-between w-[100%]">
                 <i className="fa-solid fa-sun"></i>
-                {weather && <h3>{formatTime(weather.sunrise)}</h3>}
+                {weather && <h3 className='text-[1rem] md:text-2xl'>{formatTime(weather.sunrise)}</h3>}
               </div>
             </div>
-            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
+            <div className="bg-[#1a191c] p-4 rounded-[15px] w-[150px] md:w-[200px] h-[100px] flex flex-col items-start justify-start gap-4">
               <h1 className="text-xs text-gray-300">Sunset</h1>
               <div className="flex text-2xl items-center justify-between w-[100%]">
                 <i className="fa-solid fa-cloud-sun"></i>
-                {weather && <h3>{formatTime(weather.sunset)}</h3>}
+                {weather && <h3 className='text-[1rem] md:text-2xl'>{formatTime(weather.sunset)}</h3>}
               </div>
             </div>
           </div>
